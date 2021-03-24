@@ -1,0 +1,30 @@
+div.alert {
+  padding: 24px 16px;
+  border-radius: 8px;
+}
+
+div.alert + div.alert {
+  margin-top: 16px;
+}
+
+div.alert.alert-danger {
+  color: white;
+  background: red;
+}
+
+div.alert.alert-success {
+  color: white;
+  background: green;
+}
+
+
+div.alert.alert-info {
+  color: black;
+  background: yellow;
+}
+
+
+.highlight {
+  color: red;
+  cursor: pointer;
+}

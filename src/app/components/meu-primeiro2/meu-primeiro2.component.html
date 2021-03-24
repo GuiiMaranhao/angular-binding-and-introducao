@@ -1,0 +1,149 @@
+<!-- <p>meu-primeiro2 works!</p>
+
+<app-cursos></app-cursos>
+
+<p>oi</p>
+
+<section>
+  <article>
+    <h3>Interpolação</h3>
+    <p>String rendereziada com interpolação: {{ url }}</p>
+    <p>Resultado de 1 + 1 é {{ 1 + 1 }}</p>
+    <p>Resultado de 1 + 1 não é {{ 1 + getValor() + 1 }}</p>
+    <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+  </article>
+</section>
+
+<section>
+  <article>
+    <h3>Property body</h3>
+
+    <img src="{{urlImagem}}" alt="Imagem natureza">
+    <img [src]="urlImagem" alt="Imagem natureza">
+  </article>
+</section>
+
+<section>
+  <article>
+    <h3>Class e StyleBinding</h3>
+    <div>
+      Selecione uma class:
+      <select #classe (change)="0">
+        <option value="danger">Error</option>
+        <option value="success">Sucesso</option>
+        <option value="info">Info</option>
+      </select>
+    </div>
+
+    <div class="alert"
+      [class.alert-danger]="classe.value == 'danger'"
+    >
+      Error
+    </div>
+    <div class="alert"
+      [class.alert-success]="classe.value == 'success'"
+    >
+      Sucesso
+    </div>
+    <div class="alert"
+      [class.alert-info]="classe.value == 'info'"
+    >
+      Info
+    </div>
+
+    <div class="alert alert-{{ classe.value }}">
+      Texto colorido conforme o select
+    </div>
+
+    <div class="alert alert-danger"
+    [style.display]="classe.value === 'danger' ? 'block' : 'none'"
+    >
+      somente error
+    </div>
+  </article>
+</section>
+
+<section>
+  <article>
+    <h3>Event binding</h3>
+
+    <div>
+      <button (click)="handleClickButton()">
+        Clique
+      </button>
+    </div>
+
+    <div>
+      <input
+        type="text"
+        (keyup)="handleKeyUp($event)"
+        (keyup.enter)="handleSalveValue($event.target.value)"
+        (blur)="handleSalveValue(campoInput.value)"
+        #campoInput
+      >
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+    </div>
+
+    <div>
+      <span
+        (mouseover)="handleMouseOverOut()"
+        (mouseout)="handleMouseOverOut()"
+        [class.highlight]="isMouseOver"
+      >
+        Passe o mouse sobre mim
+      </span>
+    </div>
+  </article>
+</section>
+
+<section>
+  <article>
+    <h3>Two-way data binding</h3>
+    <div>
+
+      <input
+        type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value"
+      >
+
+    <input
+      type="text"
+      [ngModel]="nome"
+      (ngModelChange)="nome = $event"
+    >
+
+    <input
+      type="text"
+      [(ngModel)]="nome"
+    >
+
+      <p>você digitou o nome: {{ nome }}</p>
+  </div>
+
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="pessoa.nome"
+    >
+
+    <input
+      type="text"
+      [(ngModel)]="pessoa.idade"
+    >
+
+    <p>meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade</p>
+  </div>
+  </article>
+</section> -->
+
+<section>
+  <article>
+    <h3>Input/Output Properties</h3>
+
+    <app-input-property [nome]="nomedoCurso"></app-input-property>
+
+    <app-output-property [valor]="30" (mudouValor)="onMudouValor($event)"></app-output-property>
+  </article>
+</section>
